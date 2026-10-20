@@ -45,13 +45,15 @@ nav a {
 
 nav a:hover { color: #fff; }
 
-nav {
+header nav {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .dropdown {
+  display: inline-block;
   position: relative;
   margin-left: 1rem;
 }
