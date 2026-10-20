@@ -45,6 +45,51 @@ nav a {
 
 nav a:hover { color: #fff; }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.dropdown summary {
+  color: #cbd5e1;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dropdown summary::-webkit-details-marker { display: none; }
+.dropdown summary::after { content: " \25BE"; }
+.dropdown summary:hover,
+.dropdown[open] summary { color: #fff; }
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 10;
+  min-width: 12rem;
+  margin-top: 0.4rem;
+  padding: 0.4rem 0;
+  background: var(--dark);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu a {
+  display: block;
+  margin: 0;
+  padding: 0.4rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover { background: #1e293b; }
+
 .wrap {
   max-width: 900px;
   margin: 0 auto;
