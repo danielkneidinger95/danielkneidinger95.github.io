@@ -3,22 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wo ist das? – Haushalts-App für Android</title>
-  <meta name="description" content="Wo ist das? speichert Haushaltsgegenstände mit Standort, Container und QR-Code, damit du alles jederzeit wiederfindest. Lokal, ohne Konto.">
+  <title>Wo ist das? für Android – Gegenstände speichern und wiederfinden</title>
+  <meta name="description" content="Wo ist das? ist die Haushalts-App, mit der du Gegenstände, Standorte, Container und QR-Codes verwaltest. Lokal, ohne Konto, ohne Werbung.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="index.html">Kneidinger Software Solutions</a>
-      <nav>
+<body class="theme-woistdas">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
-        <details class="dropdown">
+        <details class="dropdown is-current">
           <summary>Apps</summary>
           <div class="dropdown-menu">
-            <a href="tankkostentracker.html">Tankkosten Tracker</a>
-            <a href="woistdas.html">Wo ist das?</a>
-            <a href="parkplatzmerker.html">Parkplatz Merker</a>
+            <a class="menu-item theme-tankkosten" href="tankkostentracker.html"><span class="app-icon app-icon-sm"><img src="img/icon-tankkosten.png" alt="" width="38" height="38"></span><span><strong>Tankkosten Tracker</strong><small>Tankbuch &amp; Verbrauch</small></span></a>
+            <a class="menu-item theme-woistdas" href="woistdas.html" aria-current="page"><span class="app-icon app-icon-sm"><img src="img/icon-woistdas.png" alt="" width="38" height="38"></span><span><strong>Wo ist das?</strong><small>Gegenstände wiederfinden</small></span></a>
+            <a class="menu-item theme-parkplatz" href="parkplatzmerker.html"><span class="app-icon app-icon-sm"><img src="img/icon-parkplatz.png" alt="" width="38" height="38"></span><span><strong>Parkplatz Merker</strong><small>Das Auto wiederfinden</small></span></a>
           </div>
         </details>
         <a href="kontakt.html">Kontakt</a>
@@ -26,112 +30,186 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Wo ist das?</h1>
-      <p>„Wo habe ich diesen Gegenstand hingelegt?“ – Ab jetzt weißt du es.</p>
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.woistdas" target="_blank" rel="noopener noreferrer">Bei Google Play ansehen</a>
-    </div>
-  </section>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-app">
+            <span class="app-icon app-icon-lg"><img src="img/icon-woistdas.png" alt="App-Icon Wo ist das?" width="192" height="192"></span>
+            <span class="eyebrow">Android-App</span>
+          </div>
+          <h1>Wo ist das?</h1>
+          <p class="lead">„Wo habe ich diesen Gegenstand hingelegt?“ Ab jetzt weißt du es. Gegenstände speichern und jederzeit wiederfinden.</p>
+          <div class="actions">
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.woistdas" target="_blank" rel="noopener noreferrer">Bei Google Play ansehen</a>
+            <a class="btn btn-ghost" href="#funktionen">Funktionen</a>
+          </div>
+          <ul class="trust">
+            <li>Alle Daten lokal</li>
+            <li>Kein Konto, kein Internet nötig</li>
+            <li>Keine Werbung</li>
+          </ul>
+        </div>
+        <div class="showcase">
+          <img src="AppDaten/WoIstDas/vorstellungsgrafik.jpg" alt="Vorstellungsgrafik der App Wo ist das?" width="1488" height="720">
+        </div>
+      </div>
+    </section>
 
-  <main class="wrap">
-    <p>„Wo ist das?“ ist eine einfache Haushalts-App, mit der du deine Gegenstände speicherst und jederzeit wiederfindest. Alle Daten bleiben lokal auf deinem Gerät. Du brauchst weder ein Konto noch eine Internetverbindung.</p>
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Die App</span>
+          <h2>Ordnung zu Hause, ohne langes Suchen.</h2>
+          <p class="muted">Du hältst fest, was du besitzt und wo es liegt. Standorte beschreibst du Schritt für Schritt. Wenn du den Gegenstand später suchst, zeigt dir die App sofort den kompletten Weg dorthin.</p>
+          <p class="muted">Ideal für Werkzeug im Keller, Weihnachtsdeko auf dem Dachboden, Ersatzteile in der Garage oder Dokumente im Schrank.</p>
+        </div>
+        <aside class="callout reveal">
+          <h3>Beispiel</h3>
+          <p><strong>Bohrmaschine</strong></p>
+          <ol class="ph-path" aria-label="Standortpfad">
+            <li>Keller</li>
+            <li>Werkstatt</li>
+            <li>Werkbank</li>
+            <li>linke Schublade</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
 
-    <h2>Worum geht es?</h2>
-    <p>Du hältst fest, was du besitzt und wo es liegt. Standorte werden Schritt für Schritt beschrieben, zum Beispiel:</p>
-    <div class="card">
-      <p><strong>Bohrmaschine</strong><br>→ Keller → Werkstatt → Werkbank → linke Schublade</p>
-    </div>
-    <p>Wenn du den Gegenstand später suchst, zeigt dir die App sofort den kompletten Weg dorthin.</p>
+    <section class="section section-alt" id="funktionen">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Das kannst du mit der App tun</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <span class="feature-num">01</span>
+            <h3>Gegenstände verwalten</h3>
+            <ul class="checklist">
+              <li>Nur der Name ist Pflicht</li>
+              <li>Optional: Foto, Kategorie, Menge, Standort, Container und Notiz</li>
+              <li>Fotos aufnehmen oder aus der Fotobibliothek wählen</li>
+              <li>Jederzeit bearbeiten und löschen</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">02</span>
+            <h3>Kategorien</h3>
+            <ul class="checklist">
+              <li>Fertige Kategorien wie Werkzeug, Elektro, Garten, Auto oder Haushalt</li>
+              <li>Eigene Kategorien erstellen</li>
+              <li>Kategorien sind optional</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">03</span>
+            <h3>Standorte</h3>
+            <ul class="checklist">
+              <li>Orte in beliebiger Tiefe anlegen, z. B. Haus → Keller → Regal 3 → Fach B</li>
+              <li>Unterstandorte beliebig verschachteln</li>
+              <li>Detailseite mit Unterstandorten, Containern und Gegenständen</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">04</span>
+            <h3>Container und Kisten</h3>
+            <ul class="checklist">
+              <li>Kisten, Boxen und andere Behälter anlegen</li>
+              <li>Wird die Kiste umgestellt, ist der Inhalt automatisch am neuen Ort</li>
+              <li>Detailseite mit Standort, QR-Code und Inhalt</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">05</span>
+            <h3>Suche</h3>
+            <ul class="checklist">
+              <li>Eine Suche über Gegenstände, Container, Kategorien, Standorte und Notizen</li>
+              <li>Treffer zeigen den Standortpfad</li>
+              <li>Direkt zur Detailseite springen</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">06</span>
+            <h3>QR-Codes</h3>
+            <ul class="checklist">
+              <li>QR-Code für Container und Standorte erzeugen</li>
+              <li>Ausdrucken und auf Kiste, Regal oder Schublade kleben</li>
+              <li>Mit dem Scanner sofort die passende Seite öffnen</li>
+              <li>Kein neuer Code nötig, wenn sich Name oder Inhalt ändern</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">07</span>
+            <h3>Startseite</h3>
+            <ul class="checklist">
+              <li>Suchfeld und Schnellaktionen</li>
+              <li>Zuletzt verwendete Gegenstände mit Vorschaubild</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">08</span>
+            <h3>Bedienungsanleitung</h3>
+            <ul class="checklist">
+              <li>Integrierte Anleitung erklärt alle Bereiche der App</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <h2>Funktionen</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Gegenstände verwalten</h3>
-        <ul>
-          <li>Nur der Name ist Pflicht</li>
-          <li>Optional: Foto, Kategorie, Menge, Standort, Container und Notiz</li>
-          <li>Fotos aufnehmen oder aus der Fotobibliothek wählen</li>
-          <li>Jederzeit bearbeiten und löschen, übersichtliche Detailseite</li>
-        </ul>
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Loslegen</span>
+          <h2>So startest du</h2>
+          <ol class="steps">
+            <li>Gegenstand hinzufügen und benennen</li>
+            <li>Optional Standort, Container, Foto und Notiz ergänzen</li>
+            <li>Speichern und später über Startseite, Suche oder Container wiederfinden</li>
+          </ol>
+          <p class="muted"><strong>Tipp:</strong> Verwende eindeutige Namen wie „Taschenlampe groß“ statt nur „Lampe“.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Datenschutz</h3>
+          <p>Alle Daten bleiben lokal auf deinem Gerät. Die App enthält keine Werbung und kein Tracking.</p>
+          <p><a href="AppPrivacyPolicy/WoIstDas/index.html">Datenschutzerklärung der App</a> &middot; <a href="datenschutz.html">Datenschutzübersicht</a></p>
+          <h3 style="margin-top:1.25rem">Support</h3>
+          <p><a class="btn btn-sm" href="kontakt.html">Zum Kontakt</a></p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Kategorien</h3>
-        <ul>
-          <li>Fertige Kategorien wie Werkzeug, Elektro, Garten, Auto, Haushalt, Weihnachten, Reinigung, Ersatzteile, Kleidung oder Sonstiges</li>
-          <li>Eigene Kategorien erstellen</li>
-          <li>Kategorien sind optional</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Standorte</h3>
-        <ul>
-          <li>Orte in beliebiger Tiefe anlegen, z. B. Haus → Keller → Werkstatt → Regal 3 → Fach B</li>
-          <li>Unterstandorte beliebig verschachteln</li>
-          <li>Detailseite zeigt Unterstandorte, Container und Gegenstände</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Container und Kisten</h3>
-        <ul>
-          <li>Kisten, Boxen und andere Behälter anlegen und einem Standort zuweisen</li>
-          <li>Wird die Kiste umgestellt, ist der Inhalt automatisch am neuen Ort</li>
-          <li>Detailseite mit Standort, QR-Code und Inhalt</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Suche</h3>
-        <ul>
-          <li>Eine Suche über Gegenstände, Container, Kategorien, Standorte und Notizen</li>
-          <li>Treffer zeigen den Standortpfad und öffnen direkt die Detailseite</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>QR-Codes</h3>
-        <ul>
-          <li>QR-Code für Container und Standorte erzeugen und ausdrucken</li>
-          <li>Mit der integrierten Scan-Funktion sofort die passende Seite öffnen</li>
-          <li>Änderungen an Name, Standort oder Inhalt erfordern keinen neuen QR-Code</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Startseite</h3>
-        <ul>
-          <li>Suchfeld und Schnellaktionen, z. B. neuen Gegenstand anlegen oder QR-Code scannen</li>
-          <li>Zuletzt verwendete Gegenstände mit Vorschaubild</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Bedienungsanleitung</h3>
-        <ul>
-          <li>Integrierte Anleitung erklärt alle Bereiche der App</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>So startest du</h2>
-    <ol>
-      <li>Gegenstand hinzufügen und benennen</li>
-      <li>Optional Standort, Container, Foto und Notiz ergänzen</li>
-      <li>Speichern und später über Startseite, Suche oder Container wiederfinden</li>
-    </ol>
-    <p class="muted"><strong>Tipp:</strong> Verwende eindeutige Namen wie „Taschenlampe groß“ statt nur „Lampe“.</p>
-
-    <h2>Für wen ist die App?</h2>
-    <p>Für alle, die zu Hause Ordnung halten und nicht mehr lange suchen wollen: Werkzeug im Keller, Weihnachtsdeko auf dem Dachboden, Ersatzteile in der Garage oder Dokumente im Schrank.</p>
-
-    <h2>Datenschutz</h2>
-    <p>Alle Daten und Fotos bleiben lokal auf dem Gerät. Details stehen in der <a href="AppPrivacyPolicy/WoIstDas/index.html">Datenschutzerklärung der App</a> und in der <a href="datenschutz.html">Datenschutzübersicht</a>.</p>
-
-    <h2>Support</h2>
-    <p>Fragen, Fehler oder Ideen? Siehe <a href="kontakt.html">Kontakt</a>.</p>
+    </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>&copy; 2026 Kneidinger Software Solutions</span>
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+          <p>Android-Apps mit .NET MAUI. Lokal, schnell und ohne Konto.</p>
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="tankkostentracker.html">Tankkosten Tracker</a></li>
+            <li><a href="woistdas.html">Wo ist das?</a></li>
+            <li><a href="parkplatzmerker.html">Parkplatz Merker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kneidinger Software Solutions</span>
+        <span>Herzogsdorf, Österreich</span>
+      </div>
     </div>
   </footer>
 </body>

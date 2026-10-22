@@ -4,41 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt – Kneidinger Software Solutions</title>
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="index.html">Kneidinger Software Solutions</a>
-      <nav>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
         <details class="dropdown">
           <summary>Apps</summary>
           <div class="dropdown-menu">
-            <a href="tankkostentracker.html">Tankkosten Tracker</a>
-            <a href="woistdas.html">Wo ist das?</a>
-            <a href="parkplatzmerker.html">Parkplatz Merker</a>
+            <a class="menu-item theme-tankkosten" href="tankkostentracker.html"><span class="app-icon app-icon-sm"><img src="img/icon-tankkosten.png" alt="" width="38" height="38"></span><span><strong>Tankkosten Tracker</strong><small>Tankbuch &amp; Verbrauch</small></span></a>
+            <a class="menu-item theme-woistdas" href="woistdas.html"><span class="app-icon app-icon-sm"><img src="img/icon-woistdas.png" alt="" width="38" height="38"></span><span><strong>Wo ist das?</strong><small>Gegenstände wiederfinden</small></span></a>
+            <a class="menu-item theme-parkplatz" href="parkplatzmerker.html"><span class="app-icon app-icon-sm"><img src="img/icon-parkplatz.png" alt="" width="38" height="38"></span><span><strong>Parkplatz Merker</strong><small>Das Auto wiederfinden</small></span></a>
           </div>
         </details>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
       </nav>
     </div>
   </header>
-
-  <main class="wrap">
-    <h1>Kontakt und Support</h1>
+<main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <h1>Kontakt und Support</h1>
+      </div>
+    </div>
+    <div class="wrap prose">
     <p>Für Fragen, Fehlermeldungen und Verbesserungsvorschläge zu meinen Apps:</p>
     <div class="card">
       <p><strong>E-Mail:</strong> <a href="mailto:danielkneidinger@gmail.com">danielkneidinger@gmail.com</a></p>
       <p class="muted">Bitte Appname, Gerätemodell und Android-Version angeben, damit Fehler schneller nachvollzogen werden können.</p>
     </div>
+  </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>&copy; 2026 Kneidinger Software Solutions</span>
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+          <p>Android-Apps mit .NET MAUI. Lokal, schnell und ohne Konto.</p>
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="tankkostentracker.html">Tankkosten Tracker</a></li>
+            <li><a href="woistdas.html">Wo ist das?</a></li>
+            <li><a href="parkplatzmerker.html">Parkplatz Merker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kneidinger Software Solutions</span>
+        <span>Herzogsdorf, Österreich</span>
+      </div>
     </div>
   </footer>
 </body>

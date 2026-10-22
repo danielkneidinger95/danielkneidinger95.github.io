@@ -4,21 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kneidinger Software Solutions – App-Entwicklung</title>
-  <meta name="description" content="Entwickler-Website von Kneidinger Software Solutions: Android-Apps mit .NET MAUI – Tankkosten Tracker, Wo ist das? und Parkplatz Merker.">
+  <meta name="description" content="Entwickler-Website von Kneidinger Software Solutions: Android-Apps mit .NET MAUI – Tankkosten Tracker, Wo ist das? und Parkplatz Merker. Lokal, schnell, ohne Konto.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="index.html">Kneidinger Software Solutions</a>
-      <nav>
-        <a href="index.html">Start</a>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html" aria-current="page">Start</a>
         <details class="dropdown">
           <summary>Apps</summary>
           <div class="dropdown-menu">
-            <a href="tankkostentracker.html">Tankkosten Tracker</a>
-            <a href="woistdas.html">Wo ist das?</a>
-            <a href="parkplatzmerker.html">Parkplatz Merker</a>
+            <a class="menu-item theme-tankkosten" href="tankkostentracker.html"><span class="app-icon app-icon-sm"><img src="img/icon-tankkosten.png" alt="" width="38" height="38"></span><span><strong>Tankkosten Tracker</strong><small>Tankbuch &amp; Verbrauch</small></span></a>
+            <a class="menu-item theme-woistdas" href="woistdas.html"><span class="app-icon app-icon-sm"><img src="img/icon-woistdas.png" alt="" width="38" height="38"></span><span><strong>Wo ist das?</strong><small>Gegenstände wiederfinden</small></span></a>
+            <a class="menu-item theme-parkplatz" href="parkplatzmerker.html"><span class="app-icon app-icon-sm"><img src="img/icon-parkplatz.png" alt="" width="38" height="38"></span><span><strong>Parkplatz Merker</strong><small>Das Auto wiederfinden</small></span></a>
           </div>
         </details>
         <a href="kontakt.html">Kontakt</a>
@@ -26,55 +30,154 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Praktische Apps für den Alltag</h1>
-      <p>Ich entwickle Android-Apps mit .NET MAUI. Der Fokus liegt auf einfacher Bedienung, schneller Erfassung und lokaler Datenspeicherung.</p>
-    </div>
-  </section>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Android-Apps &middot; .NET MAUI</span>
+          <h1>Praktische Apps für den <em>Alltag</em>.</h1>
+          <p class="lead">Einfache Bedienung, schnelle Erfassung und lokale Datenspeicherung. Ohne Konto, ohne Cloud-Zwang.</p>
+          <div class="actions">
+            <a class="btn" href="#apps">Apps entdecken</a>
+            <a class="btn btn-ghost" href="kontakt.html">Kontakt</a>
+          </div>
+          <ul class="trust">
+            <li>Daten bleiben auf dem Gerät</li>
+            <li>Kein Konto nötig</li>
+            <li>Entwickelt in Österreich</li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <figure class="phone">
+            <img src="AppDaten/TankkostenTracker/screenshoteins.png" alt="" width="383" height="862">
+          </figure>
+          <figure class="phone">
+            <img class="img-light" src="AppDaten/ParkplatzMerker/screenshotdreihell.jpeg" alt="" width="818" height="1600">
+            <img class="img-dark" src="AppDaten/ParkplatzMerker/screenshotdreidunkel.jpeg" alt="" width="818" height="1600">
+          </figure>
+        </div>
+      </div>
+    </section>
 
-  <main class="wrap">
-    <h2>Schwerpunkte</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Mobile Apps</h3>
-        <p>Entwicklung mit .NET 10 und .NET MAUI, primär für Android.</p>
-      </div>
-      <div class="card">
-        <h3>Lokale Daten</h3>
-        <p>Daten bleiben auf dem Gerät. Kein Konto und keine Cloud-Synchronisation nötig.</p>
-      </div>
-      <div class="card">
-        <h3>Klare Auswertungen</h3>
-        <p>Übersichtliche Statistiken, damit Kosten und Verbrauch sofort verständlich sind.</p>
-      </div>
-    </div>
+    <section class="section" id="apps">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Meine Apps</span>
+          <h2>Drei Apps, ein Ziel: weniger Suchen, mehr Überblick.</h2>
+          <p>Jede App löst ein alltägliches Problem und funktioniert komplett offline.</p>
+        </div>
+        <div class="grid">
+          <article class="app-card theme-tankkosten reveal">
+            <div class="app-card-head">
+              <span class="app-icon"><img src="img/icon-tankkosten.png" alt="" width="56" height="56" loading="lazy"></span>
+              <div>
+                <h3>Tankkosten Tracker</h3>
+                <span class="badge">Android</span>
+              </div>
+            </div>
+            <p>Tankvorgänge, Kilometerstände und Kosten erfassen und auswerten. Verbrauch, Literpreis und Kosten pro 100 km im Überblick.</p>
+            <ul class="chips"><li>Tankbuch</li><li>Statistiken</li><li>Backup</li></ul>
+            <div class="actions">
+              <a class="btn btn-sm" href="tankkostentracker.html">Mehr erfahren</a>
+              <a class="btn btn-sm btn-outline" href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.autologbuch" target="_blank" rel="noopener noreferrer">Google Play</a>
+            </div>
+          </article>
 
-    <h2 id="apps">Meine Apps</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Tankkosten Tracker</h3>
-        <p>Tankvorgänge, Kilometerstände und Kosten erfassen und auswerten. Verbrauch, Literpreis und Kosten pro 100 km im Überblick.</p>
-        <p><a href="tankkostentracker.html">Mehr erfahren</a> · <a href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.autologbuch" target="_blank" rel="noopener noreferrer">Google Play</a></p>
+          <article class="app-card theme-woistdas reveal">
+            <div class="app-card-head">
+              <span class="app-icon"><img src="img/icon-woistdas.png" alt="" width="56" height="56" loading="lazy"></span>
+              <div>
+                <h3>Wo ist das?</h3>
+                <span class="badge">Android</span>
+              </div>
+            </div>
+            <p>Haushaltsgegenstände mit Standort, Container und QR-Code verwalten und jederzeit wiederfinden.</p>
+            <ul class="chips"><li>Standorte</li><li>QR-Codes</li><li>Suche</li></ul>
+            <div class="actions">
+              <a class="btn btn-sm" href="woistdas.html">Mehr erfahren</a>
+              <a class="btn btn-sm btn-outline" href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.woistdas" target="_blank" rel="noopener noreferrer">Google Play</a>
+            </div>
+          </article>
+
+          <article class="app-card theme-parkplatz reveal">
+            <div class="app-card-head">
+              <span class="app-icon"><img src="img/icon-parkplatz.png" alt="" width="56" height="56" loading="lazy"></span>
+              <div>
+                <h3>Parkplatz Merker</h3>
+                <span class="badge badge-warn">In der Testphase</span>
+              </div>
+            </div>
+            <p>Parkplatz per Knopfdruck speichern und per Navigation zurück zum Auto finden.</p>
+            <ul class="chips"><li>Standort</li><li>Navigation</li><li>Notizen</li></ul>
+            <div class="actions">
+              <a class="btn btn-sm" href="parkplatzmerker.html">Mehr erfahren</a>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="card">
-        <h3>Wo ist das?</h3>
-        <p>Haushaltsgegenstände mit Standort, Container und QR-Code verwalten und jederzeit wiederfinden.</p>
-        <p><a href="woistdas.html">Mehr erfahren</a> · <a href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.woistdas" target="_blank" rel="noopener noreferrer">Google Play</a></p>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Schwerpunkte</span>
+          <h2>Gemacht für den Alltag. Gebaut für Datenschutz.</h2>
+          <p class="muted">Die Apps entstehen mit .NET 10 und .NET MAUI, primär für Android. Übersichtliche Auswertungen zeigen Kosten und Verbrauch sofort verständlich, und alle Daten bleiben bei dir.</p>
+          <div class="actions">
+            <a class="btn btn-outline" href="datenschutz.html">Zur Datenschutzübersicht</a>
+          </div>
+        </div>
+        <aside class="callout reveal">
+          <h3>Das gilt für alle Apps</h3>
+          <ul class="checklist">
+            <li>Daten werden lokal auf dem Gerät gespeichert</li>
+            <li>Kein Benutzerkonto, keine Anmeldung</li>
+            <li>Keine Cloud-Synchronisation</li>
+            <li>Eigene Datenschutzerklärung für jede App</li>
+          </ul>
+        </aside>
       </div>
-      <div class="card">
-        <h3>Parkplatz Merker</h3>
-        <p>Parkplatz per Knopfdruck speichern und per Navigation zurück zum Auto finden.</p>
-        <p><a href="parkplatzmerker.html">Mehr erfahren</a> · <span class="muted">In der Testphase</span></p>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap">
+        <div>
+          <h2>Fragen, Fehler oder Ideen?</h2>
+          <p>Ich freue mich über Rückmeldungen zu meinen Apps.</p>
+        </div>
+        <a class="btn" href="kontakt.html">Kontakt aufnehmen</a>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>&copy; 2026 Kneidinger Software Solutions</span>
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+          <p>Android-Apps mit .NET MAUI. Lokal, schnell und ohne Konto.</p>
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="tankkostentracker.html">Tankkosten Tracker</a></li>
+            <li><a href="woistdas.html">Wo ist das?</a></li>
+            <li><a href="parkplatzmerker.html">Parkplatz Merker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kneidinger Software Solutions</span>
+        <span>Herzogsdorf, Österreich</span>
+      </div>
     </div>
   </footer>
 </body>

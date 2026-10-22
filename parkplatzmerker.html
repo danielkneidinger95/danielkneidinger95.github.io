@@ -3,22 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parkplatz Merker – Nie wieder das Auto suchen</title>
-  <meta name="description" content="Parkplatz Merker speichert, wo du geparkt hast, und führt dich per Knopfdruck zurück zu deinem Fahrzeug.">
+  <title>Parkplatz Merker für Android – Nie wieder das Auto suchen</title>
+  <meta name="description" content="Parkplatz Merker speichert deinen Parkplatz per Knopfdruck und führt dich per Navigation zurück zu deinem Auto. Aktuell in der Testphase.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="index.html">Kneidinger Software Solutions</a>
-      <nav>
+<body class="theme-parkplatz">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
-        <details class="dropdown">
+        <details class="dropdown is-current">
           <summary>Apps</summary>
           <div class="dropdown-menu">
-            <a href="tankkostentracker.html">Tankkosten Tracker</a>
-            <a href="woistdas.html">Wo ist das?</a>
-            <a href="parkplatzmerker.html">Parkplatz Merker</a>
+            <a class="menu-item theme-tankkosten" href="tankkostentracker.html"><span class="app-icon app-icon-sm"><img src="img/icon-tankkosten.png" alt="" width="38" height="38"></span><span><strong>Tankkosten Tracker</strong><small>Tankbuch &amp; Verbrauch</small></span></a>
+            <a class="menu-item theme-woistdas" href="woistdas.html"><span class="app-icon app-icon-sm"><img src="img/icon-woistdas.png" alt="" width="38" height="38"></span><span><strong>Wo ist das?</strong><small>Gegenstände wiederfinden</small></span></a>
+            <a class="menu-item theme-parkplatz" href="parkplatzmerker.html" aria-current="page"><span class="app-icon app-icon-sm"><img src="img/icon-parkplatz.png" alt="" width="38" height="38"></span><span><strong>Parkplatz Merker</strong><small>Das Auto wiederfinden</small></span></a>
           </div>
         </details>
         <a href="kontakt.html">Kontakt</a>
@@ -26,92 +30,221 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Parkplatz Merker</h1>
-      <p>Nie wieder das Auto suchen. Parkplatz Merker merkt sich, wo du geparkt hast, und führt dich per Knopfdruck zurück zu deinem Fahrzeug.</p>
-      <p class="muted-hero">Diese App ist noch in der Testphase und daher nicht freigegeben.</p>
-    </div>
-  </section>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-app">
+            <span class="app-icon app-icon-lg"><img src="img/icon-parkplatz.png" alt="App-Icon Parkplatz Merker" width="192" height="192"></span>
+            <span class="eyebrow">Android-App &middot; <span class="badge badge-warn">In der Testphase</span></span>
+          </div>
+          <h1>Parkplatz Merker</h1>
+          <p class="lead">Nie wieder das Auto suchen. Die App merkt sich, wo du geparkt hast, und führt dich per Knopfdruck zurück.</p>
+          <div class="actions">
+            <a class="btn" href="#funktionen">Funktionen ansehen</a>
+            <a class="btn btn-ghost" href="kontakt.html">Kontakt</a>
+          </div>
+          <p class="hint">Die App ist noch nicht im Google Play Store veröffentlicht.</p>
+        </div>
+        <div class="hero-visual">
+          <figure class="phone">
+            <img class="img-light" src="AppDaten/ParkplatzMerker/screenshoteinshell.jpeg" alt="Startbildschirm von Parkplatz Merker mit großem Speichern-Button" width="818" height="1600">
+            <img class="img-dark" src="AppDaten/ParkplatzMerker/screenshoteinsdunkel.jpeg" alt="Startbildschirm von Parkplatz Merker im Dunkelmodus" width="818" height="1600">
+          </figure>
+        </div>
+      </div>
+    </section>
 
-  <main class="wrap">
-    <h2>Für wen ist die App?</h2>
-    <p>Für alle, die in großen Parkhäusern, auf Parkplätzen in fremden Städten, am Flughafen oder bei Veranstaltungen ihr Auto schnell wiederfinden möchten.</p>
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Die App</span>
+          <h2>Für Parkhaus, Flughafen und fremde Städte.</h2>
+          <p class="muted">Für alle, die in großen Parkhäusern, auf Parkplätzen in fremden Städten, am Flughafen oder bei Veranstaltungen ihr Auto schnell wiederfinden möchten.</p>
+          <ul class="checklist">
+            <li>Parkplatz mit einem Tipp speichern</li>
+            <li>Entfernung und Navigation zu Fuß zum Auto</li>
+            <li>Stockwerk, Nummer und Notiz als Gedächtnisstütze</li>
+            <li>Helles und dunkles Erscheinungsbild</li>
+          </ul>
+        </div>
+        <div class="showcase reveal">
+          <img src="AppDaten/ParkplatzMerker/vorstellungsgrafik.jpg" alt="Vorstellungsgrafik der App Parkplatz Merker" width="1488" height="720" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-    <h2>Funktionen</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Parkplatz speichern</h3>
-        <ul>
-          <li>Ein großer Button speichert deinen aktuellen Standort</li>
-          <li>Beim ersten Mal fragt die App um Erlaubnis für den Standortzugriff und erklärt, warum er benötigt wird</li>
-        </ul>
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Screenshots</span>
+          <h2>So sieht die App aus</h2>
+        </div>
+        <div class="gallery" tabindex="0" role="region" aria-label="Screenshots von Parkplatz Merker">
+          <figure class="shot">
+            <div class="phone">
+              <img class="img-light" src="AppDaten/ParkplatzMerker/screenshoteinshell.jpeg" alt="Parkplatz speichern" width="818" height="1600" loading="lazy">
+              <img class="img-dark" src="AppDaten/ParkplatzMerker/screenshoteinsdunkel.jpeg" alt="Parkplatz speichern (Dunkelmodus)" width="818" height="1600" loading="lazy">
+            </div>
+            <figcaption>Parkplatz speichern</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone">
+              <img class="img-light" src="AppDaten/ParkplatzMerker/screenshotzweihell.jpeg" alt="Weitere Angaben zum Parkplatz" width="818" height="1600" loading="lazy">
+              <img class="img-dark" src="AppDaten/ParkplatzMerker/screenshotzweidunkel.jpeg" alt="Weitere Angaben zum Parkplatz (Dunkelmodus)" width="818" height="1600" loading="lazy">
+            </div>
+            <figcaption>Weitere Angaben</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone">
+              <img class="img-light" src="AppDaten/ParkplatzMerker/screenshotdreihell.jpeg" alt="Gespeicherter Parkplatz mit Entfernung und Navigation" width="818" height="1600" loading="lazy">
+              <img class="img-dark" src="AppDaten/ParkplatzMerker/screenshotdreidunkel.jpeg" alt="Gespeicherter Parkplatz mit Entfernung und Navigation (Dunkelmodus)" width="818" height="1600" loading="lazy">
+            </div>
+            <figcaption>Auto wiederfinden</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="card">
-        <h3>Weitere Angaben (optional)</h3>
-        <ul>
-          <li>Stockwerk / Ebene, z. B. „Parkdeck 3“</li>
-          <li>Parkplatznummer, z. B. „B 47“</li>
-          <li>Notiz, z. B. „Neben dem Aufzug“</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Auto wiederfinden</h3>
-        <ul>
-          <li>Entfernung zu deinem Auto</li>
-          <li>Deine eingegebenen Angaben</li>
-          <li>Koordinaten des Parkplatzes</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Entfernung aktualisieren</h3>
-        <p>Beim Öffnen der App wird die Entfernung automatisch berechnet. Mit „Entfernung aktualisieren“ fragst du sie jederzeit neu ab, während du unterwegs bist.</p>
-      </div>
-      <div class="card">
-        <h3>Navigation zum Auto</h3>
-        <p>Mit „Navigieren“ öffnet sich die Karten-App deines Geräts. Du wirst zu Fuß zu deinem Auto geführt.</p>
-      </div>
-      <div class="card">
-        <h3>Parkplatz löschen</h3>
-        <p>Bist du wieder losgefahren, entfernst du den Parkplatz mit „Löschen“. Danach ist die App bereit für den nächsten.</p>
-      </div>
-      <div class="card">
-        <h3>Dauerhaft gespeichert</h3>
-        <p>Dein Parkplatz bleibt gespeichert, auch wenn du die App schließt oder das Gerät neu startest.</p>
-      </div>
-      <div class="card">
-        <h3>Hell und Dunkel</h3>
-        <p>Die App passt sich dem Hell- oder Dunkelmodus deines Geräts an und zeigt verständliche Meldungen, z. B. wenn der Standort nicht ermittelt werden konnte.</p>
-      </div>
-    </div>
+    </section>
 
-    <h2>So funktioniert es</h2>
-    <ol>
-      <li><strong>Parken:</strong> Auto abstellen, App öffnen, optional Angaben ergänzen und „Parkplatz speichern“ tippen.</li>
-      <li><strong>Zurückkehren:</strong> App öffnen, Entfernung ansehen und „Navigieren“ tippen.</li>
-      <li><strong>Weiterfahren:</strong> „Löschen“ tippen.</li>
-    </ol>
+    <section class="section" id="funktionen">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Das kannst du mit der App tun</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <span class="feature-num">01</span>
+            <h3>Parkplatz speichern</h3>
+            <ul class="checklist">
+              <li>Ein großer Button speichert deinen aktuellen Standort</li>
+              <li>Beim ersten Mal fragt die App um Erlaubnis für den Standortzugriff</li>
+              <li>Bei Ablehnung erklärt die App, warum der Standort benötigt wird</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">02</span>
+            <h3>Weitere Angaben</h3>
+            <ul class="checklist">
+              <li>Stockwerk oder Ebene, z. B. „Parkdeck 3“</li>
+              <li>Parkplatznummer, z. B. „B 47“</li>
+              <li>Notiz, z. B. „Neben dem Aufzug“</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">03</span>
+            <h3>Auto wiederfinden</h3>
+            <ul class="checklist">
+              <li>Entfernung zu deinem Auto</li>
+              <li>Deine Angaben zu Stockwerk, Nummer und Notiz</li>
+              <li>Koordinaten des Parkplatzes</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">04</span>
+            <h3>Entfernung aktualisieren</h3>
+            <ul class="checklist">
+              <li>Beim Öffnen wird die Entfernung automatisch berechnet</li>
+              <li>Mit „Entfernung aktualisieren“ jederzeit neu abfragen</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">05</span>
+            <h3>Navigation zum Auto</h3>
+            <ul class="checklist">
+              <li>„Navigieren“ öffnet die Karten-App deines Geräts</li>
+              <li>Du wirst zu Fuß zu deinem Auto geführt</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">06</span>
+            <h3>Löschen und neu starten</h3>
+            <ul class="checklist">
+              <li>Mit „Löschen“ entfernst du den gespeicherten Parkplatz</li>
+              <li>Danach ist die App bereit für den nächsten</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">07</span>
+            <h3>Dauerhaft gespeichert</h3>
+            <ul class="checklist">
+              <li>Der Parkplatz bleibt gespeichert, auch nach dem Schließen oder Neustart des Geräts</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">08</span>
+            <h3>Komfort und Werbung</h3>
+            <ul class="checklist">
+              <li>Hell- und Dunkelmodus folgen deinem Gerät</li>
+              <li>Verständliche Hinweise und Meldungen</li>
+              <li>Werbebanner; die Einwilligung zu personalisierter Werbung legst du beim Start fest</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <h2>Gut zu wissen</h2>
-    <ul>
-      <li>Es wird immer <strong>ein</strong> Parkplatz gespeichert. Ein neuer Parkplatz ersetzt den alten.</li>
-      <li>In Tiefgaragen ist der GPS-Empfang oft schwach. Nutze dort die Angaben zu Ebene, Nummer und Notiz als Gedächtnisstütze.</li>
-      <li>Der Standort wird nur zum Speichern und zur Entfernungsberechnung genutzt.</li>
-      <li>Die App enthält einen Werbebanner. Beim Start kannst du deine Einwilligung zur Anzeige personalisierter Werbung festlegen.</li>
-    </ul>
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Loslegen</span>
+          <h2>So funktioniert es</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><strong>Parken</strong>Auto abstellen, App öffnen, optional Angaben ergänzen und „Parkplatz speichern“ tippen.</li>
+          <li class="reveal"><strong>Zurückkehren</strong>App öffnen, Entfernung ansehen und „Navigieren“ tippen.</li>
+          <li class="reveal"><strong>Weiterfahren</strong>„Löschen“ tippen. Die App ist bereit für den nächsten Parkplatz.</li>
+        </ol>
+      </div>
+    </section>
 
-    <h2>Datenschutz</h2>
-    <p>Der Parkplatzstandort wird ausschließlich lokal auf dem Gerät gespeichert. Details stehen in der <a href="AppPrivacyPolicy/ParkplatzMerker/index.html">Datenschutzerklärung der App</a> und in der <a href="datenschutz.html">Datenschutzübersicht</a>.</p>
-
-    <h2>Support</h2>
-    <p>Fragen, Fehler oder Ideen? Siehe <a href="kontakt.html">Kontakt</a>.</p>
+    <section class="section">
+      <div class="wrap grid">
+        <div class="card reveal">
+          <h3>Gut zu wissen</h3>
+          <ul class="checklist">
+            <li>Es wird immer <strong>ein</strong> Parkplatz gespeichert. Ein neuer ersetzt den alten.</li>
+            <li>In Tiefgaragen ist der GPS-Empfang oft schwach. Nutze dort Ebene, Nummer und Notiz als Gedächtnisstütze.</li>
+            <li>Der Standort wird nur zum Speichern und zur Entfernungsberechnung genutzt.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Datenschutz &amp; Support</h3>
+          <p><a href="AppPrivacyPolicy/ParkplatzMerker/index.html">Datenschutzerklärung der App</a> &middot; <a href="datenschutz.html">Datenschutzübersicht</a></p>
+          <p><a class="btn btn-sm" href="kontakt.html">Zum Kontakt</a></p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>&copy; 2026 Kneidinger Software Solutions</span>
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+          <p>Android-Apps mit .NET MAUI. Lokal, schnell und ohne Konto.</p>
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="tankkostentracker.html">Tankkosten Tracker</a></li>
+            <li><a href="woistdas.html">Wo ist das?</a></li>
+            <li><a href="parkplatzmerker.html">Parkplatz Merker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kneidinger Software Solutions</span>
+        <span>Herzogsdorf, Österreich</span>
+      </div>
     </div>
   </footer>
 </body>

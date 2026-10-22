@@ -4,29 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutzerklärung – Kneidinger Software Solutions</title>
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="index.html">Kneidinger Software Solutions</a>
-      <nav>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
         <details class="dropdown">
           <summary>Apps</summary>
           <div class="dropdown-menu">
-            <a href="tankkostentracker.html">Tankkosten Tracker</a>
-            <a href="woistdas.html">Wo ist das?</a>
-            <a href="parkplatzmerker.html">Parkplatz Merker</a>
+            <a class="menu-item theme-tankkosten" href="tankkostentracker.html"><span class="app-icon app-icon-sm"><img src="img/icon-tankkosten.png" alt="" width="38" height="38"></span><span><strong>Tankkosten Tracker</strong><small>Tankbuch &amp; Verbrauch</small></span></a>
+            <a class="menu-item theme-woistdas" href="woistdas.html"><span class="app-icon app-icon-sm"><img src="img/icon-woistdas.png" alt="" width="38" height="38"></span><span><strong>Wo ist das?</strong><small>Gegenstände wiederfinden</small></span></a>
+            <a class="menu-item theme-parkplatz" href="parkplatzmerker.html"><span class="app-icon app-icon-sm"><img src="img/icon-parkplatz.png" alt="" width="38" height="38"></span><span><strong>Parkplatz Merker</strong><small>Das Auto wiederfinden</small></span></a>
           </div>
         </details>
         <a href="kontakt.html">Kontakt</a>
       </nav>
     </div>
   </header>
-
-  <main class="wrap">
-    <h1>Datenschutzerklärung</h1>
+<main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <h1>Datenschutzerklärung</h1>
+      </div>
+    </div>
+    <div class="wrap prose">
 
     <h2>Verantwortlicher</h2>
     <p>Daniel Kneidinger, Anschrift siehe <a href="impressum.html">Impressum</a>, E-Mail: <a href="mailto:danielkneidinger@gmail.com">danielkneidinger@gmail.com</a></p>
@@ -57,17 +65,41 @@
     <p><a href="AppPrivacyPolicy/ParkplatzMerker/index.html">Vollständige Datenschutzerklärung</a></p>
 
     <h2>Website</h2>
-    <p>Diese Website wird über GitHub Pages bereitgestellt. Dabei kann GitHub technisch bedingt Zugriffsdaten wie die IP-Adresse verarbeiten. Die Website selbst setzt keine Cookies und verwendet keine Analyse-Tools.</p>
+    <p>Diese Website wird über GitHub Pages bereitgestellt. Dabei kann GitHub technisch bedingt Zugriffsdaten wie die IP-Adresse verarbeiten. Die Website selbst setzt keine Cookies und verwendet keine Analyse-Tools. Schriftarten werden von dieser Website selbst ausgeliefert, es werden keine externen Schriftdienste eingebunden. Wenn du das helle oder dunkle Design manuell umschaltest, wird diese Auswahl ausschließlich lokal in deinem Browser (Local Storage) gespeichert und nicht übertragen.</p>
 
     <h2>Rechte der Nutzer</h2>
     <p>Es bestehen die gesetzlichen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde.</p>
+  </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>&copy; 2026 Kneidinger Software Solutions</span>
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+          <p>Android-Apps mit .NET MAUI. Lokal, schnell und ohne Konto.</p>
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="tankkostentracker.html">Tankkosten Tracker</a></li>
+            <li><a href="woistdas.html">Wo ist das?</a></li>
+            <li><a href="parkplatzmerker.html">Parkplatz Merker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kneidinger Software Solutions</span>
+        <span>Herzogsdorf, Österreich</span>
+      </div>
     </div>
   </footer>
 </body>

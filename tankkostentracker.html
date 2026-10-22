@@ -3,22 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tankkosten Tracker für Android</title>
+  <title>Tankkosten Tracker für Android – Dein Tankbuch für die Hosentasche</title>
   <meta name="description" content="Der Tankkosten Tracker erfasst Tankungen, Kilometerstände und Kosten lokal auf dem Gerät und zeigt Verbrauchsstatistiken.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <a class="brand" href="index.html">Kneidinger Software Solutions</a>
-      <nav>
+<body class="theme-tankkosten">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Start</a>
-        <details class="dropdown">
+        <details class="dropdown is-current">
           <summary>Apps</summary>
           <div class="dropdown-menu">
-            <a href="tankkostentracker.html">Tankkosten Tracker</a>
-            <a href="woistdas.html">Wo ist das?</a>
-            <a href="parkplatzmerker.html">Parkplatz Merker</a>
+            <a class="menu-item theme-tankkosten" href="tankkostentracker.html" aria-current="page"><span class="app-icon app-icon-sm"><img src="img/icon-tankkosten.png" alt="" width="38" height="38"></span><span><strong>Tankkosten Tracker</strong><small>Tankbuch &amp; Verbrauch</small></span></a>
+            <a class="menu-item theme-woistdas" href="woistdas.html"><span class="app-icon app-icon-sm"><img src="img/icon-woistdas.png" alt="" width="38" height="38"></span><span><strong>Wo ist das?</strong><small>Gegenstände wiederfinden</small></span></a>
+            <a class="menu-item theme-parkplatz" href="parkplatzmerker.html"><span class="app-icon app-icon-sm"><img src="img/icon-parkplatz.png" alt="" width="38" height="38"></span><span><strong>Parkplatz Merker</strong><small>Das Auto wiederfinden</small></span></a>
           </div>
         </details>
         <a href="kontakt.html">Kontakt</a>
@@ -26,98 +30,213 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1>Tankkosten Tracker</h1>
-      <p>Dein Tankbuch für die Hosentasche: Tankungen erfassen, lokal speichern, klar auswerten.</p>
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.autologbuch" target="_blank" rel="noopener noreferrer">Bei Google Play ansehen</a>
-    </div>
-  </section>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-app">
+            <span class="app-icon app-icon-lg"><img src="img/icon-tankkosten.png" alt="App-Icon Tankkosten Tracker" width="192" height="192"></span>
+            <span class="eyebrow">Android-App</span>
+          </div>
+          <h1>Tankkosten Tracker</h1>
+          <p class="lead">Dein Tankbuch für die Hosentasche: Tankungen erfassen, lokal speichern, klar auswerten.</p>
+          <div class="actions">
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.kneidingersoftwaresolution.autologbuch" target="_blank" rel="noopener noreferrer">Bei Google Play ansehen</a>
+            <a class="btn btn-ghost" href="#funktionen">Funktionen</a>
+          </div>
+          <ul class="trust">
+            <li>Alle Daten lokal</li>
+            <li>Kein Konto nötig</li>
+            <li>Mehrere Fahrzeuge</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <figure class="phone">
+            <img src="AppDaten/TankkostenTracker/screenshoteins.png" alt="Dashboard des Tankkosten Trackers mit Verbrauch, Kosten pro 100 km und Gesamtübersicht" width="383" height="862">
+          </figure>
+        </div>
+      </div>
+    </section>
 
-  <main class="wrap">
-    <p>Tankkosten Tracker ist die einfache App, um Tankvorgänge festzuhalten und zu sehen, was dein Auto wirklich verbraucht und kostet. Alle Daten bleiben auf deinem Gerät. Ein Benutzerkonto brauchst du nicht.</p>
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <span class="eyebrow">Die App</span>
+          <h2>Sieh, was dein Auto wirklich kostet.</h2>
+          <p class="muted">Tankkosten Tracker ist die einfache App, um Tankvorgänge festzuhalten und zu sehen, was dein Auto wirklich verbraucht und kostet. Alle Daten bleiben auf deinem Gerät. Ein Benutzerkonto brauchst du nicht.</p>
+          <ul class="checklist">
+            <li>Schnelle Erfassung in wenigen Sekunden</li>
+            <li>Alle Daten bleiben lokal auf deinem Gerät</li>
+            <li>Kein Konto und keine Anmeldung nötig</li>
+            <li>Für mehrere Fahrzeuge geeignet</li>
+            <li>Deutsche Sprache, mit Werbebanner</li>
+          </ul>
+        </div>
+        <div class="showcase reveal">
+          <img src="AppDaten/TankkostenTracker/vorstellungsgrafik.jpg" alt="Vorstellungsgrafik: Auto Tankkosten-Tracker – Tanken, Verbrauch und Kosten verfolgen" width="1488" height="720" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-    <h2>Funktionen</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Tankungen erfassen</h3>
-        <ul>
-          <li>Datum, Kilometerstand, Menge, Gesamtpreis, optional Tankstelle und Notiz</li>
-          <li>Nur zwei von drei Werten nötig (Liter, Gesamtpreis, Preis pro Liter), der dritte wird berechnet</li>
-          <li>Eingabeprüfung, z. B. bei Datum in der Zukunft oder zu niedrigem Kilometerstand</li>
-        </ul>
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Screenshots</span>
+          <h2>So sieht die App aus</h2>
+        </div>
+        <div class="gallery" tabindex="0" role="region" aria-label="Screenshots des Tankkosten Trackers">
+          <figure class="shot">
+            <div class="phone"><img src="AppDaten/TankkostenTracker/screenshoteins.png" alt="Dashboard mit aktuellem Überblick" width="383" height="862" loading="lazy"></div>
+            <figcaption>Dashboard</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone"><img src="AppDaten/TankkostenTracker/screenshotzwei.png" alt="Formular zum Erfassen einer neuen Tankung" width="383" height="862" loading="lazy"></div>
+            <figcaption>Neue Tankung</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone"><img src="AppDaten/TankkostenTracker/screenshotdrei.png" alt="Liste aller Tankungen mit Literpreis" width="383" height="862" loading="lazy"></div>
+            <figcaption>Tankhistorie</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone"><img src="AppDaten/TankkostenTracker/screenshotvier.png" alt="Statistik mit Durchschnittsverbrauch und Kosten" width="383" height="862" loading="lazy"></div>
+            <figcaption>Statistik</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="card">
-        <h3>Tankungen verwalten</h3>
-        <ul>
-          <li>Tankhistorie in zeitlicher Reihenfolge</li>
-          <li>Detailansicht mit allen berechneten Werten</li>
-          <li>Nachträglich bearbeiten, Löschen mit Rückfrage</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Automatische Berechnungen</h3>
-        <ul>
-          <li>Preis pro Liter und gefahrene Strecke</li>
-          <li>Verbrauch in l/100 km</li>
-          <li>Kosten pro Kilometer und pro 100 km</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Mehrere Fahrzeuge</h3>
-        <ul>
-          <li>Beliebig viele Fahrzeuge mit Hersteller, Modell, Kennzeichen und Kilometerstand</li>
-          <li>Aktives Fahrzeug bestimmt Übersicht, Historie und Statistik</li>
-          <li>Fahrzeuge mit Tankungen sind vor versehentlichem Löschen geschützt</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Dashboard</h3>
-        <ul>
-          <li>Aktueller Kilometerstand, Durchschnittsverbrauch, Kosten pro 100 km</li>
-          <li>Gefahrene Kilometer, getankte Liter, Gesamtkosten</li>
-          <li>Zusammenfassung der letzten Tankung</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Statistiken und Diagramme</h3>
-        <ul>
-          <li>Diagramme zu Verbrauch, Literpreis und Kosten pro 100 km</li>
-          <li>Tankstellenübersicht mit durchschnittlichem Literpreis</li>
-          <li>Zeitraumfilter: Woche, Monat, Jahr oder gesamt</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Backup</h3>
-        <ul>
-          <li>Backup erstellen, speichern oder teilen</li>
-          <li>Datei wird vor der Wiederherstellung geprüft</li>
-          <li>Automatische Sicherheitskopie vor jeder Wiederherstellung</li>
-        </ul>
-      </div>
-    </div>
+    </section>
 
-    <h2>Auf einen Blick</h2>
-    <ul>
-      <li>Schnelle Erfassung in wenigen Sekunden</li>
-      <li>Alle Daten bleiben lokal auf deinem Gerät, kein Konto und keine Anmeldung nötig</li>
-      <li>Für mehrere Fahrzeuge geeignet</li>
-      <li>Deutsche Sprache, mit Werbebanner</li>
-    </ul>
-    <p class="muted"><strong>Hinweis:</strong> Wenn du die App deinstallierst oder die App-Daten löschst, können deine Daten verloren gehen. Erstelle deshalb regelmäßig ein Backup.</p>
+    <section class="section" id="funktionen">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Das kannst du mit der App tun</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <span class="feature-num">01</span>
+            <h3>Tankungen erfassen</h3>
+            <ul class="checklist">
+              <li>Datum, Kilometerstand, Menge und Gesamtpreis, optional Tankstelle und Notiz</li>
+              <li>Nur zwei von drei Werten nötig (Liter, Gesamtpreis, Preis pro Liter), der dritte wird berechnet</li>
+              <li>Das heutige Datum ist vorausgewählt</li>
+              <li>Eingabeprüfung, z. B. bei Datum in der Zukunft oder zu niedrigem Kilometerstand</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">02</span>
+            <h3>Tankungen verwalten</h3>
+            <ul class="checklist">
+              <li>Tankhistorie in zeitlicher Reihenfolge</li>
+              <li>Detailansicht mit allen berechneten Werten</li>
+              <li>Nachträglich bearbeiten, Löschen mit Rückfrage</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">03</span>
+            <h3>Automatische Berechnungen</h3>
+            <ul class="checklist">
+              <li>Preis pro Liter und gefahrene Strecke</li>
+              <li>Verbrauch in l/100 km</li>
+              <li>Kosten pro Kilometer und pro 100 km</li>
+            </ul>
+            <p class="muted" style="margin-top:.6rem">Bei der ersten Tankung fehlt noch die Vergleichstankung, daher sind Strecke und Verbrauch erst ab der zweiten möglich.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">04</span>
+            <h3>Mehrere Fahrzeuge</h3>
+            <ul class="checklist">
+              <li>Beliebig viele Fahrzeuge mit Bezeichnung, Hersteller, Modell, Kennzeichen und Kilometerstand</li>
+              <li>Das aktive Fahrzeug bestimmt Übersicht, Historie und Statistik</li>
+              <li>Fahrzeuge mit Tankungen lassen sich nicht versehentlich löschen</li>
+              <li>Beim ersten Start wird „Mein Fahrzeug“ angelegt</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">05</span>
+            <h3>Dashboard</h3>
+            <ul class="checklist">
+              <li>Aktueller Kilometerstand, Durchschnittsverbrauch, Kosten pro 100 km</li>
+              <li>Gefahrene Kilometer, getankte Liter, Gesamtkosten</li>
+              <li>Zusammenfassung der letzten Tankung</li>
+              <li>Direkt zur Erfassung einer neuen Tankung</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">06</span>
+            <h3>Statistiken und Diagramme</h3>
+            <ul class="checklist">
+              <li>Kennzahlen zu Verbrauch, Kosten und Strecke</li>
+              <li>Diagramme zu Verbrauch, Literpreis und Kosten pro 100 km</li>
+              <li>Tankstellenübersicht mit durchschnittlichem Literpreis</li>
+              <li>Zeitraumfilter: Woche, Monat, Jahr oder gesamt</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">07</span>
+            <h3>Datensicherung</h3>
+            <ul class="checklist">
+              <li>Backup erstellen, speichern oder teilen, z. B. per Cloud oder E-Mail</li>
+              <li>Datei wird vor der Wiederherstellung geprüft</li>
+              <li>Automatische Sicherheitskopie vor jeder Wiederherstellung</li>
+            </ul>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-num">08</span>
+            <h3>Hilfe und Datenschutz</h3>
+            <ul class="checklist">
+              <li>Integrierte Bedienungsanleitung</li>
+              <li>Datenschutz- und Werbeeinstellungen jederzeit änderbar</li>
+            </ul>
+          </article>
+        </div>
+        <p class="muted reveal" style="margin-top:1.5rem"><strong>Hinweis:</strong> Wenn du die App deinstallierst oder die App-Daten löschst, können deine Daten verloren gehen. Erstelle deshalb regelmäßig ein Backup.</p>
+      </div>
+    </section>
 
-    <h2>Datenschutz</h2>
-    <p>Fahrzeug- und Tankdaten werden ausschließlich lokal auf dem Gerät gespeichert. Die App enthält Werbung von Google AdMob. Details stehen in der <a href="AppPrivacyPolicy/TankkostenTracker/index.html">Datenschutzerklärung der App</a> und in der <a href="datenschutz.html">Datenschutzübersicht</a>.</p>
-
-    <h2>Support</h2>
-    <p>Fragen, Fehler oder Ideen? Siehe <a href="kontakt.html">Kontakt</a>.</p>
+    <section class="section section-alt">
+      <div class="wrap grid">
+        <div class="card reveal">
+          <h3>Datenschutz</h3>
+          <p>Fahrzeug- und Tankdaten werden ausschließlich lokal auf dem Gerät gespeichert. Die App enthält Werbung von Google AdMob.</p>
+          <p><a href="AppPrivacyPolicy/TankkostenTracker/index.html">Datenschutzerklärung der App</a> &middot; <a href="datenschutz.html">Datenschutzübersicht</a></p>
+        </div>
+        <div class="card reveal">
+          <h3>Support</h3>
+          <p>Fragen, Fehler oder Ideen? Schreib mir einfach.</p>
+          <p><a class="btn btn-sm" href="kontakt.html">Zum Kontakt</a></p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>&copy; 2026 Kneidinger Software Solutions</span>
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">K</span><span>Kneidinger <small>Software Solutions</small></span></a>
+          <p>Android-Apps mit .NET MAUI. Lokal, schnell und ohne Konto.</p>
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="tankkostentracker.html">Tankkosten Tracker</a></li>
+            <li><a href="woistdas.html">Wo ist das?</a></li>
+            <li><a href="parkplatzmerker.html">Parkplatz Merker</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Rechtliches</h2>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kneidinger Software Solutions</span>
+        <span>Herzogsdorf, Österreich</span>
+      </div>
     </div>
   </footer>
 </body>
